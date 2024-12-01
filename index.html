@@ -38,9 +38,9 @@
                       Add
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">More Details</a></li>
-                      <li><a class="dropdown-item" href="#">Monitoring Entry</a></li>
-                      <li><a class="dropdown-item" href="#">Audit Entry</a></li>
+                      <li><a class="dropdown-item" href="#" id="launchModal">Audit Entry</a></li>
+                      <li><a class="dropdown-item" href="#" id="launchModal">Monitoring Entry</a></li>
+
                     </ul>
                   </li>
                 </ul>
@@ -48,55 +48,177 @@
             </div>
           </nav>
     </header>
-    <main>
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputBranchName">Branch Name</label>
-            <input type="text" class="form-control" id="inputBranchName" placeholder="Enter Branch Name">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputQuarter">Quarter</label>
-            <input type="number" class="form-control" id="quarter" placeholder="Pick quarter">
-          </div>
+    <main class="d-flex justify-content-xl-between">
+      <div class="card text-white bg-primary mb-3 " style="max-width: 18rem;">
+        <div class="card-header">Audit Replies</div>
+        <div class="card-body">
+          <h5 class="card-title">126</h5>
+          <!-- <p class="card-text"></p> -->
         </div>
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+    
+      <div class="card text-white bg-success mb-3 d-flex justify-content-start" style="max-width: 18rem;">
+        <div class="card-header">Completed</div>
+        <div class="card-body">
+          <h5 class="card-title">20</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">Not Started</div>
+        <div class="card-body">
+          <h5 class="card-title">65</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
+      </div>
+      <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">Ongoing</div>
+        <div class="card-body">
+          <h5 class="card-title">18</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </form>
+      </div>
   
+      </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Branch Detail</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             Enter the branch information
+             <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Branch Name" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" placeholder="Quarter" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Auditor's Names" aria-label="Auditor's Name" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input type="date" class="form-control" placeholder="Audit Scope Start Date" aria-label="Scope Start" aria-describedby="basic-addon1"> 
+
+              <input type="date" class="form-control" placeholder="Audit Scope End Date" aria-label="Scope End" aria-describedby="basic-addon1">
+            </div>
+          
+            <div class="input-group mb-3">
+              <input type="date" class="form-control" placeholder="Audit Start Date" aria-label="Audit Start" aria-describedby="basic-addon1">
+              <input type="date" class="form-control" placeholder="Audit End Date" aria-label="Audit End" aria-describedby="basic-addon1">
+
+            </div>
+       
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" placeholder="Chalani Number" aria-label="Scope Start" aria-describedby="basic-addon1">
+              <input type="date" class="form-control" placeholder="Report Sent to Branch" aria-label="Report to Branch" aria-describedby="basic-addon1">
+
+            </div>
+               
+            
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+      
+    
     </main>
+    <table class="table table-bordered table-hover ">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Branch Name</th>
+          <th scope="col">Auditor Name</th>
+          <th scope="col">Quarter</th>
+          <th scope="col">Audit Scope From</th>
+          <th scope="col">Audit Scope To</th>
+          <th scope="col">Audit Start Date</th>
+          <th scope="col">Audit End Date</th>
+          <th scope="col">Report Sent to Branch</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Biratnagar</td>
+          <td>Bishal Pantha and Achyut Humagain</td>
+          <td>1</td>
+          <td>2080-03-01</td>
+          <td>2081-04-32</td>
+          <td>2081-05-12</td>
+          <td>2081-05-22</td>
+          <td>2081-06-12</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Baitadi</td>
+          <td>Raghunath Joshi and Sudip Bhakta Acharya</td>
+          <td>1</td>
+          <td>2080-03-01</td>
+          <td>2081-04-32</td>
+          <td>2081-05-12</td>
+          <td>2081-05-22</td>
+          <td>2081-06-12</td>
+
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Jomsom</td>
+          <td>Rudra KC and Sushil Ranjan Shah</td>
+          <td>1</td>
+          <td>2080-03-01</td>
+          <td>2081-04-32</td>
+          <td>2081-05-12</td>
+          <td>2081-05-22</td>
+          <td>2081-06-12</td>
+
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>LC Audit</td>
+          <td>Rajendra Joshi and Jhabilal Bhattarai</td>
+          <td>1</td>
+          <td>2080-03-01</td>
+          <td>2081-04-32</td>
+          <td>2081-05-12</td>
+          <td>2081-05-22</td>
+          <td>2081-06-12</td>
+
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Rolpa</td>
+          <td>Namaraj Neupane and Rupesh Pandey</td>
+          <td>1</td>
+          <td>2080-03-01</td>
+          <td>2081-04-32</td>
+          <td>2081-05-12</td>
+          <td>2081-05-22</td>
+          <td>2081-06-12</td>
+
+        </tr>
+     
+      </tbody>
+    </table>
+
+
+
+    <script>
+      document.getElementById('launchModal').addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent the default anchor behavior
+          var modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+          modal.show();
+      });
+  </script>
+  
 </body>
 
 </html>
